@@ -12,10 +12,26 @@ TODO(you): Write any additional styles you need here.
     justify-content: center;
 }
 
+.gif {
+    height: 500px;
+    width: 500px;
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
 
 #play_or_pause {
     height: 70px;
+
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -39,16 +55,6 @@ TODO(you): Write any additional styles you need here.
     display: flex;
     flex-direction: column;
 
-}
-
-.gif {
-    height: 100px;
-    width: 100px;
-
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .font {

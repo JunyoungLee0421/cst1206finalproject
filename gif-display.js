@@ -17,9 +17,9 @@ class GifDisplay {
 
     this.gifIndex = 0;
 
-    this.images = [];
-
     this.index = 0;
+    
+    this.images = [];
     
   }
   // TODO(you): Add methods as necessary.

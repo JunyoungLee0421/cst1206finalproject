@@ -3,7 +3,7 @@
 //
 // See HW4 writeup for more hints and details.
 class PlayButton {
-  constructor() {
+  constructor(audioPlayer) {
     // TODO(you): Implement the constructor and add fields as necessary.
     
     this.playing = true;
@@ -19,24 +19,26 @@ class PlayButton {
   }
   // TODO(you): Add methods as necessary.
 
-  play_button() {
-    this.buttonContainer.src = "images/pause.png";
-    this.audioPlayer.play();
-  }
-
-  pause_button() {
-    this.buttonContainer.src = "images/play.png";
-    this.audioPlayer.puase();
-  }
-
   toggle(event) {
     if (this.playing) {
       this.pause();
     } else {
       this.play();
     }
-
     this.playing = !this.playing;
   }
+
+  play() {
+    this.buttonContainer.src = "images/pause.png";
+
+    this.audioPlayer.play();
+  }
+
+  pause() {
+    this.buttonContainer.src = "images/play.png";
+
+    this.audioPlayer.pause();
+  }
+
 
 }

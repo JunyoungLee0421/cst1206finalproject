@@ -10,20 +10,21 @@
 class MusicScreen {
   constructor(finish_loading) {
     // TODO(you): Implement the constructor and add fields as necessary.
-    
-    this.finish_loading = finish_loading;
-
-    this.PlaySong = this.PlaySong.bind(this);
+  
+    this.setSong = this.setSong.bind(this);
 
     this.audioPlayer = new AudioPlayer();
 
     this.playButton = new PlayButton(this.audioPlayer);
+
+    this.finish_loading = finish_loading;
+
   
   }
   // TODO(you): Add methods as necessary.
 
-  PlaySong(songURL) {
-    this.audioPlayer.PlaySong(songURL);
+  setSong(songURL) {
+    this.audioPlayer.setSong(songURL);
     this.audioPlayer.setKickCallback(this.gifDisplay.loadGif);
     this.audioPlayer.play();
 

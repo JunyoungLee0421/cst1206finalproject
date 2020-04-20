@@ -8,19 +8,18 @@ class App {
 
     this.song = {};
 
-    this.submit = this.submit.bind(this);
+    this.submission = this.submission.bind(this);
 
     this.finish_loading = this.finish_loading.bind(this);
 
-    this.menuScreen = new MenuScreen(this.submit);
+    this.menuScreen = new MenuScreen(this.submission);
 
     this.musicScreen = new MusicScreen(this.finish_loading);
-
     
   }
   // TODO(you): Add methods as necessary.
 
-  submit(songURL, gifData) {
+  submission(songURL, gifData) {
     document.querySelector("#menu").classList.add("inactive");
     document.querySelector("#loading").classList.remove("inactive");
 
@@ -33,8 +32,9 @@ class App {
     document.querySelector("#playing").classList.remove("inactive");
     document.querySelector("#loading").classList.remove("inactive");
 
-    this.musicScreen.PlaySong(this.songURL);
+    this.musicScreen.setSong(this.songURL);
   }
 
 
 }
+//uploaded
